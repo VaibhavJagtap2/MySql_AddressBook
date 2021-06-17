@@ -187,3 +187,24 @@ mysql> SELECT state,COUNT(state) FROM address_book;
 | Maharashtra |            3 |
 +-------------+--------------+
 1 row in set (0.00 sec)
+
+UC8:
+
+ SELECT * FROM address_book ORDER BY first_name;
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+| id | first_name | last_name | city         | address     | state       | zip    | phone_no   | email             | type   |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+|  1 | Bacchan    | Jagtap    | Pune         | Shewalewadi | Maharashtra | 412307 | 8007815003 | vai@gmail.com     | friend |
+|  3 | Omkar      | Gaikwad   | Mahadevnagar | Pune        | Maharashtra | 412512 | 8784576653 | jasf@gmail.com    | family |
+|  2 | Suraj      | Khumbhar  | Bhosari      | Dighi       | Maharashtra | 423113 | 9987987767 | dghsa43@gmail.com | friend |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+3 rows in set (0.00 sec)
+ SELECT * FROM address_book ORDER BY first_name DESC;
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+| id | first_name | last_name | city         | address     | state       | zip    | phone_no   | email             | type   |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+|  2 | Suraj      | Khumbhar  | Bhosari      | Dighi       | Maharashtra | 423113 | 7786347438 | dghsa43@gmail.com | friend |
+|  3 | Omkar      | Gaikwad   | Mahadevnagar | Pune        | Maharashtra | 412512 | 8784576653 | jasf@gmail.com    | family |
+|  1 | Bacchan    | Jagtap    | Pune         | Shewalewadi | Maharashtra | 412307 | 8007815003 | vai@gmail.com     | friend |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+3 rows in set (0.02 sec)
