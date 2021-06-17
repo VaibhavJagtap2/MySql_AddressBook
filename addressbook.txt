@@ -232,3 +232,20 @@ UC10:
 | 8784576653 |           1 |
 +------------+-------------+
 3 rows in set (0.00 sec)
+
+UC11:
+
+ INSERT INTO address_book
+    -> VALUES(4, 'Darshan', 'Paleriya', 'Pune', 'Yerwada', 'Maharashtra', 443242, 9788464346, 'dsjh@64gmail.com', 'friend');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+| id | first_name | last_name | city         | address     | state       | zip    | phone_no   | email             | type   |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+|  1 | Bacchan    | Jagtap    | Pune         | Shewalewadi | Maharashtra | 412307 | 8007815003 | vai@gmail.com     | friend |
+|  2 | Suraj      | Khumbhar  | Bhosari      | Dighi       | Maharashtra | 423113 | 9987987767 | dghsa43@gmail.com | friend |
+|  3 | Omkar      | Gaikwad   | Mahadevnagar | Pune        | Maharashtra | 412512 | 8784576653 | jasf@gmail.com    | family |
+|  4 | Darshan    | Paleriya  | Pune         | Yerwada     | Maharashtra | 443242 | 9788464346 | dsjh@64gmail.com  | friend |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+4 rows in set (0.05 sec)
