@@ -58,3 +58,36 @@ mysql> DESCRIBE address_book;
 | type       | varchar(100) | NO   |     | NULL    |       |
 +------------+--------------+------+-----+---------+-------+
 10 rows in set (0.06 sec)
+
+UC3:
+
+ INSERT INTO address_book (id,first_name,last_name,city,address,state,zip,phone_no,email,type) VALUES
+    -> (1, 'Vaibhav', 'Jagtap', 'Pune', 'Shewalewadi', 'Maharashtra', 412307, 8007815003, 'vai@gmail.com', 'friend'),
+    -> (2, 'Suraj', 'Khumbhar', 'Bhosari', 'Dighi', 'Maharashtra', 423113, 7786347438, 'dghsa43@gmail.com', 'friend'),
+    -> (3, 'Omkar', 'Gaikwad', 'Mahadevnagar', 'Pune', 'Maharashtra', 412512, 8784576653, 'jasf@gmail.com', 'family');
+Query OK, 3 rows affected (0.14 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+| id | first_name | last_name | city         | address     | state       | zip    | phone_no   | email             | type   |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+|  1 | Vaibhav    | Jagtap    | Pune         | Shewalewadi | Maharashtra | 412307 | 8007815003 | vai@gmail.com     | friend |
+|  2 | Suraj      | Khumbhar  | Bhosari      | Dighi       | Maharashtra | 423113 | 7786347438 | dghsa43@gmail.com | friend |
+|  3 | Omkar      | Gaikwad   | Mahadevnagar | Pune        | Maharashtra | 412512 | 8784576653 | jasf@gmail.com    | family |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+3 rows in set (0.04 sec)
+mysql> INSERT INTO address_book
+    -> VALUES(4, 'Darshan', 'Paleriya', 'Pune', 'Yerwada', 'Maharashtra', 443242, 9788464346, 'dsjh@64gmail.com', 'friend');
+Query OK, 1 row affected (0.15 sec)
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+| id | first_name | last_name | city         | address     | state       | zip    | phone_no   | email             | type   |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+|  1 | Vaibhav    | Jagtap    | Pune         | Shewalewadi | Maharashtra | 412307 | 8007815003 | vai@gmail.com     | friend |
+|  2 | Suraj      | Khumbhar  | Bhosari      | Dighi       | Maharashtra | 423113 | 7786347438 | dghsa43@gmail.com | friend |
+|  3 | Omkar      | Gaikwad   | Mahadevnagar | Pune        | Maharashtra | 412512 | 8784576653 | jasf@gmail.com    | family |
+|  4 | Darshan    | Paleriya  | Pune         | Yerwada     | Maharashtra | 443242 | 9788464346 | dsjh@64gmail.com  | friend |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+4 rows in set (0.04 sec)
