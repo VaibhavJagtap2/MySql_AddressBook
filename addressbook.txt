@@ -1,1 +1,27 @@
-echo "Welcome To SqlAddressBook"
+UC1:
+
+ CREATE DATABASE address_book_service;
+Query OK, 1 row affected (0.12 sec)
+
+mysql> show databases;
++----------------------+
+| Database             |
++----------------------+
+| address_book_service |
+| information_schema   |
+| mysql                |
+| payroll_service      |
+| performance_schema   |
+| sys                  |
++----------------------+
+6 rows in set (0.10 sec)
+
+mysql> USE address_book_service;
+Database changed
+mysql> SELECT DATABASE();
++----------------------+
+| DATABASE()           |
++----------------------+
+| address_book_service |
++----------------------+
+1 row in set (0.00 sec)
