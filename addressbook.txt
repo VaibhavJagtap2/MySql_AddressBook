@@ -91,3 +91,33 @@ mysql> SELECT * FROM address_book;
 |  4 | Darshan    | Paleriya  | Pune         | Yerwada     | Maharashtra | 443242 | 9788464346 | dsjh@64gmail.com  | friend |
 +----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
 4 rows in set (0.04 sec)
+
+UC4:
+
+update address_book set first_name = 'Bacchan' where first_name = 'Vaibhav';
+Query OK, 1 row affected (0.14 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+| id | first_name | last_name | city         | address     | state       | zip    | phone_no   | email             | type   |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+|  1 | Bacchan    | Jagtap    | Pune         | Shewalewadi | Maharashtra | 412307 | 8007815003 | vai@gmail.com     | friend |
+|  2 | Suraj      | Khumbhar  | Bhosari      | Dighi       | Maharashtra | 423113 | 7786347438 | dghsa43@gmail.com | friend |
+|  3 | Omkar      | Gaikwad   | Mahadevnagar | Pune        | Maharashtra | 412512 | 8784576653 | jasf@gmail.com    | family |
+|  4 | Darshan    | Paleriya  | Pune         | Yerwada     | Maharashtra | 443242 | 9788464346 | dsjh@64gmail.com  | friend |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+4 rows in set (0.00 sec)
+update address_book set phone_no = 9987987767 where first_name = 'Suraj';
+Query OK, 1 row affected (0.12 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+| id | first_name | last_name | city         | address     | state       | zip    | phone_no   | email             | type   |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+|  1 | Bacchan    | Jagtap    | Pune         | Shewalewadi | Maharashtra | 412307 | 8007815003 | vai@gmail.com     | friend |
+|  2 | Suraj      | Khumbhar  | Bhosari      | Dighi       | Maharashtra | 423113 | 9987987767 | dghsa43@gmail.com | friend |
+|  3 | Omkar      | Gaikwad   | Mahadevnagar | Pune        | Maharashtra | 412512 | 8784576653 | jasf@gmail.com    | family |
++----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
+3 rows in set (0.03 sec)
