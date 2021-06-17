@@ -25,3 +25,36 @@ mysql> SELECT DATABASE();
 | address_book_service |
 +----------------------+
 1 row in set (0.00 sec)
+
+UC2:
+ CREATE TABLE address_book
+    -> (
+    -> id             int PRIMARY KEY,
+    -> first_name     VARCHAR(100)     NOT NULL,
+    -> last_name      VARCHAR(100)     NOT NULL,
+    -> city           VARCHAR(100)     NOT NULL,
+    -> address        VARCHAR(100)     NOT NULL,
+    -> state          VARCHAR(100)     NOT NULL,
+    -> zip            VARCHAR(100)     NOT NULL,
+    -> phone_no       VARCHAR(100)     NOT NULL,
+    -> email          VARCHAR(100)     NOT NULL,
+    -> type           VARCHAR(100)     NOT NUll
+    -> );
+Query OK, 0 rows affected (1.90 sec)
+
+mysql> DESCRIBE address_book;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| id         | int          | NO   | PRI | NULL    |       |
+| first_name | varchar(100) | NO   |     | NULL    |       |
+| last_name  | varchar(100) | NO   |     | NULL    |       |
+| city       | varchar(100) | NO   |     | NULL    |       |
+| address    | varchar(100) | NO   |     | NULL    |       |
+| state      | varchar(100) | NO   |     | NULL    |       |
+| zip        | varchar(100) | NO   |     | NULL    |       |
+| phone_no   | varchar(100) | NO   |     | NULL    |       |
+| email      | varchar(100) | NO   |     | NULL    |       |
+| type       | varchar(100) | NO   |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+10 rows in set (0.06 sec)
