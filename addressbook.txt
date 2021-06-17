@@ -170,3 +170,20 @@ mysql> SELECT state,first_name, last_name FROM address_book ORDER BY state;
 +-------------+------------+-----------+
 3 rows in set (0.00 sec)
 
+UC7:
+
+SELECT city,COUNT(city) FROM address_book;
++------+-------------+
+| city | COUNT(city) |
++------+-------------+
+| Pune |           3 |
++------+-------------+
+1 row in set (0.03 sec)
+
+mysql> SELECT state,COUNT(state) FROM address_book;
++-------------+--------------+
+| state       | COUNT(state) |
++-------------+--------------+
+| Maharashtra |            3 |
++-------------+--------------+
+1 row in set (0.00 sec)
