@@ -147,3 +147,26 @@ mysql> SELECT * FROM address_book;
 |  3 | Omkar      | Gaikwad   | Mahadevnagar | Pune        | Maharashtra | 412512 | 8784576653 | jasf@gmail.com    | family |
 +----+------------+-----------+--------------+-------------+-------------+--------+------------+-------------------+--------+
 3 rows in set (0.03 sec)
+
+UC6:
+
+SELECT city,first_name, last_name FROM address_book ORDER BY city;
++--------------+------------+-----------+
+| city         | first_name | last_name |
++--------------+------------+-----------+
+| Bhosari      | Suraj      | Khumbhar  |
+| Mahadevnagar | Omkar      | Gaikwad   |
+| Pune         | Bacchan    | Jagtap    |
++--------------+------------+-----------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT state,first_name, last_name FROM address_book ORDER BY state;
++-------------+------------+-----------+
+| state       | first_name | last_name |
++-------------+------------+-----------+
+| Maharashtra | Bacchan    | Jagtap    |
+| Maharashtra | Suraj      | Khumbhar  |
+| Maharashtra | Omkar      | Gaikwad   |
++-------------+------------+-----------+
+3 rows in set (0.00 sec)
+
